@@ -114,11 +114,7 @@ public class BasketEntity implements Serializable {
         if (size() != that.size())
             return false;
         for (int i = 0; i < size(); i++) {
-            try {
-                if (get(i).equals(that.get(i))) {
-                    return false;
-                }
-            } catch (BallIndexOutOfBoundsException e) {
+            if(!ballsList.get(i).equals(that.ballsList.get(i))){
                 return false;
             }
         }
