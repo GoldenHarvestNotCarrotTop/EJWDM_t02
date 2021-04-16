@@ -10,19 +10,19 @@ import java.util.List;
 public class BasketEntity implements Serializable {
     private final int DEFAULT_CAPACITY = 10;
 
-    private List<BallEntity> ballsList = new ArrayList<>();
+    private final List<BallEntity> ballsList = new ArrayList<>();
 
     private double ballsWeight = 0;
-    private int capacity;
+    private final int capacity;
 
 
     public BasketEntity() {
         this.capacity = DEFAULT_CAPACITY;
     }
 
-    public BasketEntity(int capacity) throws IllegalCapacityExcpetion {
+    public BasketEntity(int capacity) throws IllegalCapacityException {
         if (capacity < 0) {
-            throw new IllegalCapacityExcpetion("Capacity must be positive!");
+            throw new IllegalCapacityException("Capacity must be positive!");
         }
         this.capacity = capacity;
     }

@@ -15,8 +15,8 @@ public class Runner {
         BasketEntity basket = null;
         try {
             basket = new BasketEntity(BALLS_COUNT*2);
-        } catch (IllegalCapacityExcpetion illegalCapacityExcpetion) {
-            exitWithError(illegalCapacityExcpetion);
+        } catch (IllegalCapacityException illegalCapacityException) {
+            exitWithError(illegalCapacityException);
         }
         for (int i = 0; i < BALLS_COUNT; i++) {
             try {
